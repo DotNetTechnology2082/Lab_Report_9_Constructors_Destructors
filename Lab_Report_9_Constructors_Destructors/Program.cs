@@ -3,13 +3,13 @@
 class Student
 {
     // Data members
-    private string name;
-    private int age;
+    string name;
+    int age;
 
     // Constructor
     public Student(string name, int age)
     {
-        // Using 'this' keyword
+        // Using this keyword
         this.name = name;
         this.age = age;
     }
@@ -33,11 +33,12 @@ class Program
     static void Main(string[] args)
     {
         // Object creation
-        Student s1 = new Student("Reema", 21);
+        Student s1 = new Student("Neha", 21);
 
         // Display data
         s1.Display();
 
+        Console.WriteLine("Press Enter to exit...");
         Console.ReadLine();
     }
 }
