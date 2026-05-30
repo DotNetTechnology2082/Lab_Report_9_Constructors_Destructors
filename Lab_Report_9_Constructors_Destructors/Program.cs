@@ -1,44 +1,50 @@
 ﻿using System;
 
-class Student
+namespace LabReport9
 {
-    // Data members
-    string name;
-    int age;
-
-    // Constructor
-    public Student(string name, int age)
+    class Student
     {
-        // Using this keyword
-        this.name = name;
-        this.age = age;
+        // Data members
+        string name;
+        int age;
+
+        // Constructor
+        public Student(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Destructor
+        ~Student()
+        {
+            Console.WriteLine("Destructor called for Student object");
+        }
+
+        // Method to display data
+        public void Display()
+        {
+            Console.WriteLine("\nStudent Details:");
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+        }
     }
 
-    // Method to display student details
-    public void Display()
+    class Program
     {
-        Console.WriteLine("Student Name: " + name);
-        Console.WriteLine("Student Age: " + age);
-    }
+        static void Main(string[] args)
+        {
+            // Creating object and initializing values
+            Student s1 = new Student("Suman", 20);
 
-    // Destructor
-    ~Student()
-    {
-        Console.WriteLine("Destructor called.");
-    }
-}
+            // Displaying data
+            s1.Display();
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Object creation
-        Student s1 = new Student("Neha", 21);
+            // Forcing garbage collection (only for demo purpose)
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
 
-        // Display data
-        s1.Display();
-
-        Console.WriteLine("Press Enter to exit...");
-        Console.ReadLine();
+            Console.WriteLine("\nEnd of Program");
+        }
     }
 }
