@@ -7,7 +7,7 @@ class Student
     int age;
 
     // Constructor
-    public Student(string name, int age)
+    public Student(sthttps://github.com/DotNetTechnology2082/Lab_Report_9_Constructors_Destructors.gitring name, int age)
     {
         // Using this keyword
         this.name = name;
@@ -33,7 +33,7 @@ class Program
     static void Main(string[] args)
     {
         // Object creation
-        Student s1 = new Student("Neha", 21);
+        Student s1 = new Student("Pradip", 21);
 
         // Display data
         s1.Display();
