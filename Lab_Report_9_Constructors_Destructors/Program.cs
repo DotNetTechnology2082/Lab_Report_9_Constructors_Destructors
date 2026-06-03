@@ -33,7 +33,7 @@ class Program
     static void Main(string[] args)
     {
         // Object creation
-        Student s1 = new Student("Neha", 21);
+        Student s1 = new Student("Krishal Shrestha", 21);
 
         // Display data
         s1.Display();
