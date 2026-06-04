@@ -2,23 +2,14 @@
 
 class Student
 {
-    // Data members
     string name;
     int age;
 
     // Constructor
     public Student(string name, int age)
     {
-        // Using this keyword
         this.name = name;
         this.age = age;
-    }
-
-    // Method to display student details
-    public void Display()
-    {
-        Console.WriteLine("Student Name: " + name);
-        Console.WriteLine("Student Age: " + age);
     }
 
     // Destructor
@@ -26,19 +17,19 @@ class Student
     {
         Console.WriteLine("Destructor called.");
     }
+
+    public void Display()
+    {
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Age: " + age);
+    }
 }
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        // Object creation
-        Student s1 = new Student("Neha", 21);
-
-        // Display data
-        s1.Display();
-
-        Console.WriteLine("Press Enter to exit...");
-        Console.ReadLine();
+        Student s = new Student("Anuj", 20);
+        s.Display();
     }
 }
